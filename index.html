@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Video In A Image | HTML | CSS | JAVA</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <section id="banner">
+    <div class="text">
+        <h2>NOTE:-</h2>
+        <p>Those Who Are Using Laptop Or Computer Your Default Cursor Would Change In This Web Site.</p>
+    </div>
+    <div class="feature-image">
+        <img src="image1.png" width="500px" height="400px">
+    </div>
+    
+    <div class="video">
+        <video src="video3.mp4" type="video/mp4" controls autoplay width="500px" height="400px" id="video3"></video>
+    </div>
+    <div class="smallCursor"></div>
+    <div class="largeCursor"></div>
+    </section>
+
+    <script>
+
+        var smallCursor = document.querySelector(".smallCursor");
+        var largeCursor = document.querySelector(".largeCursor");
+
+        document.onmousemove = function(e){
+            smallCursor.style.left = (e.pageX -5) + "px";
+            smallCursor.style.top = (e.pageY -5) + "px";
+
+            smallCursor.style.display = "block";
+
+            largeCursor.style.left = (e.pageX -22) + "px";
+            largeCursor.style.top = (e.pageY -22) + "px";
+
+            largeCursor.style.display = "block";
+        }
+
+    </script>
+
+
+
+</body>
+</html>
